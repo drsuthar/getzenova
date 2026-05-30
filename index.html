@@ -85,7 +85,7 @@ body:has(a:hover) .cur,body:has(button:hover) .cur{width:18px;height:18px;backgr
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    LAYOUT
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.wrap{max-width:1140px;margin:0 auto;padding:0 2rem}
+.wrap{max-width:1140px;width:100%;margin:0 auto;padding:0 2rem}
 section{position:relative;overflow:hidden}
 .hr{height:1px;background:var(--bdr)}
 .hr-c{height:1px;background:linear-gradient(90deg,transparent,var(--bdr2),transparent)}
@@ -93,7 +93,7 @@ section{position:relative;overflow:hidden}
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    BUTTONS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--fb);font-size:.875rem;font-weight:600;border-radius:6px;padding:.78rem 1.65rem;transition:all .22s var(--ease);cursor:none;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:var(--fb);font-size:.875rem;font-weight:600;border-radius:6px;padding:.78rem 1.65rem;transition:all .22s var(--ease);cursor:none;white-space:nowrap}
 .btn:hover{transform:translateY(-1px)}
 .btn-primary{background:var(--blue);color:#fff;box-shadow:0 4px 20px rgba(22,71,232,.3)}
 .btn-primary:hover{background:#1e52f5;box-shadow:0 8px 32px rgba(22,71,232,.45)}
@@ -152,6 +152,8 @@ nav.sc{background:rgba(5,9,20,.88);backdrop-filter:blur(20px) saturate(1.4);bord
 .mob a:hover{color:var(--cyan)}
 .mob-x{position:absolute;top:1.5rem;right:2rem;font-size:1.1rem;color:var(--w30);background:none;border:none;cursor:pointer}
 @media(max-width:860px){.nl,.nr .btn-secondary{display:none}.ham{display:flex}}
+@media(max-width:520px){nav{padding:.95rem 0}.wrap{padding:0 1rem}.nw{gap:.8rem}.logo-name{font-size:1.08rem}.logo-svg{width:30px;height:30px}.nr{gap:.45rem}.nr .btn-primary{padding:.52rem .82rem;font-size:.76rem}.nr .btn-primary svg{width:12px;height:12px}.ham{padding:6px 2px}}
+@media(max-width:370px){.nr .btn-primary{width:42px;height:42px;padding:0;font-size:0;gap:0}.nr .btn-primary svg{margin:0}}
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    HERO
@@ -178,7 +180,7 @@ nav.sc{background:rgba(5,9,20,.88);backdrop-filter:blur(20px) saturate(1.4);bord
 .core{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:20%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 36% 34%,rgba(0,194,212,.5),rgba(22,71,232,.65) 50%,rgba(5,9,20,.9) 80%);box-shadow:0 0 50px rgba(0,194,212,.22),0 0 100px rgba(22,71,232,.12);animation:breathe 4s ease-in-out infinite}
 @keyframes breathe{0%,100%{box-shadow:0 0 50px rgba(0,194,212,.22),0 0 100px rgba(22,71,232,.12)}50%{box-shadow:0 0 80px rgba(0,194,212,.38),0 0 150px rgba(22,71,232,.22)}}
 /* Hero content */
-.hero-con{position:relative;z-index:2;max-width:640px}
+.hero-con{position:relative;z-index:2;max-width:640px;width:100%;min-width:0}
 .hero-tags{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:2rem;animation:fu .7s var(--ease) .2s both}
 .hero-h{margin-bottom:1.4rem;animation:fu .7s var(--ease) .35s both}
 .hero-p{margin-bottom:2.2rem;max-width:490px;animation:fu .7s var(--ease) .5s both}
@@ -188,7 +190,8 @@ nav.sc{background:rgba(5,9,20,.88);backdrop-filter:blur(20px) saturate(1.4);bord
 .hs-l{font-family:var(--fm);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--w30);margin-top:.15rem}
 .sdiv{width:1px;height:34px;background:var(--bdr);align-self:center}
 @keyframes fu{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-@media(max-width:760px){.rings{display:none}.hero{padding:8rem 0 4rem}}
+@media(max-width:760px){.rings{display:none}.hero{min-height:auto;padding:8rem 0 4rem}.hero-btns,.pd-btns,.fcta-btns{flex-direction:column}.hero-btns .btn,.pd-btns .btn,.fcta-btns .btn{width:100%;white-space:normal}.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem 1rem}.hero-stats .sdiv{display:none}.hero-tags{gap:.45rem}.chip{max-width:100%;letter-spacing:.1em}}
+@media(max-width:430px){.d1{font-size:clamp(2.3rem,12vw,2.85rem);letter-spacing:-.035em}.d2{font-size:clamp(2rem,11vw,2.75rem)}.body{font-size:.93rem}.hero-h,.hero-p{max-width:100%;overflow-wrap:break-word}.hero-stats{grid-template-columns:1fr}.hs-n{font-size:1.65rem}}
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    MARQUEE
@@ -359,6 +362,7 @@ nav.sc{background:rgba(5,9,20,.88);backdrop-filter:blur(20px) saturate(1.4);bord
 .metrics{padding:4.5rem 0;background:var(--ink2);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr)}
 .met-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
 @media(max-width:760px){.met-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.met-grid{grid-template-columns:1fr;gap:1rem}.met-item{padding:1rem}}
 .met-item{text-align:center;padding:1.25rem}
 .met-v{font-family:var(--fd);font-size:clamp(2.2rem,4vw,3.2rem);font-weight:800;letter-spacing:-.04em;line-height:1;margin-bottom:.4rem;background:linear-gradient(135deg,var(--white),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .met-l{font-size:.82rem;color:var(--w30)}
@@ -382,6 +386,8 @@ nav.sc{background:rgba(5,9,20,.88);backdrop-filter:blur(20px) saturate(1.4);bord
 .tc-nm{font-family:var(--fd);font-size:.9rem;font-weight:600;letter-spacing:-.01em;margin-bottom:.08rem}
 .tc-rl{font-size:.72rem;color:var(--w30)}
 
+@media(max-width:480px){.rv-l,.rv-r{transform:translateY(20px)}.rv-l.on,.rv-r.on{transform:none}}
+
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    FINAL CTA
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
@@ -392,9 +398,9 @@ nav.sc{background:rgba(5,9,20,.88);backdrop-filter:blur(20px) saturate(1.4);bord
 .fcta-box p{max-width:420px;margin:0 auto 2.25rem}
 .fcta-btns{display:flex;justify-content:center;gap:.75rem;flex-wrap:wrap}
 .fcta-fine{font-family:var(--fm);font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;color:var(--w12);margin-top:1.2rem}
-.contact-form-shell{margin:3rem auto 0;max-width:720px;text-align:left;position:relative;z-index:1}
-.contact-form-shell iframe{border-radius:10px}
-@media(max-width:600px){.fcta-box{padding:3.5rem 1.75rem;border-radius:10px}}
+.contact-form-shell{margin:3rem auto 0;max-width:720px;width:100%;text-align:left;position:relative;z-index:1;overflow:hidden;border-radius:10px}
+.contact-form-shell iframe{border-radius:10px;width:100%!important;max-width:100%!important}
+@media(max-width:600px){.fcta{padding:5rem 0}.fcta-box{padding:3.25rem 1rem;border-radius:10px}.fcta-fine{line-height:1.7;letter-spacing:.08em}.contact-form-shell{margin-top:2rem;width:calc(100vw - 2rem);max-width:calc(100vw - 2rem)}}
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    FOOTER
@@ -434,6 +440,7 @@ footer{background:var(--ink2);border-top:1px solid var(--bdr);padding:5rem 0 2.5
 .fl.show{opacity:1;transform:none;pointer-events:auto}
 .fl-btn{display:flex;align-items:center;gap:.45rem;background:var(--blue);color:#fff;font-size:.8rem;font-weight:600;padding:.68rem 1.25rem;border-radius:6px;border:none;cursor:none;box-shadow:0 8px 28px rgba(22,71,232,.38);text-decoration:none;transition:transform .2s,box-shadow .2s;font-family:var(--fb)}
 .fl-btn:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(22,71,232,.5)}
+@media(max-width:600px){.fl{display:none}}
 </style>
 </head>
 <body>
@@ -449,7 +456,7 @@ footer{background:var(--ink2);border-top:1px solid var(--bdr);padding:5rem 0 2.5
   <a href="#approach">How It Works</a>
   <a href="#industries">Industries</a>
   <a href="#contact">Contact</a>
-  <a href="#contact" class="btn btn-primary" style="margin-top:.5rem">Get started free</a>
+  <a href="#lead-form" class="btn btn-primary" style="margin-top:.5rem">Get started</a>
 </div>
 
 <!-- ═══════════ NAVIGATION ═══════════ -->
@@ -489,7 +496,7 @@ footer{background:var(--ink2);border-top:1px solid var(--bdr);padding:5rem 0 2.5
 
       <div class="nr">
         <a href="mailto:hello@getzenova.in" class="btn btn-secondary" style="padding:.5rem 1.1rem;font-size:.8rem">Send email</a>
-        <a href="#contact" class="btn btn-primary" style="padding:.55rem 1.3rem;font-size:.82rem">
+        <a href="#lead-form" class="btn btn-primary" style="padding:.55rem 1.3rem;font-size:.82rem">
           Get started
           <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M3 6.5H10M7 4L10 6.5L7 9" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -530,8 +537,8 @@ footer{background:var(--ink2);border-top:1px solid var(--bdr);padding:5rem 0 2.5
         Three focused AI products — Zenova Aria handles your calls and automation, Zenova Studio builds your web presence, Zenova Signal grows your visibility. One platform. Zero complexity.
       </p>
       <div class="hero-btns">
-        <a href="#contact" class="btn btn-primary btn-lg">
-          Start free — no card needed
+        <a href="#lead-form" class="btn btn-primary btn-lg">
+          Get started
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7H11M8 4.5L11 7L8 9.5" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
         <a href="mailto:hello@getzenova.in?subject=Demo Request" class="btn btn-secondary btn-lg">Book a demo call</a>
@@ -655,7 +662,7 @@ footer{background:var(--ink2);border-top:1px solid var(--bdr);padding:5rem 0 2.5
           <li><span style="background:#f59e0b;width:5px;height:5px;border-radius:50%;flex-shrink:0;margin-top:.55rem;display:block"></span><span><strong style="color:var(--white);font-weight:600">Built-in CRM</strong> — 360° contact profiles, lead scoring, pipeline management, and automated follow-up tasks</span></li>
         </ul>
         <div class="pd-btns">
-          <a href="#contact" class="btn btn-primary">Try Zenova Aria free</a>
+          <a href="#lead-form" class="btn btn-primary">Get started with Aria</a>
           <a href="mailto:hello@getzenova.in?subject=Aria Demo" class="btn btn-secondary">Request a demo</a>
         </div>
       </div>
@@ -751,7 +758,7 @@ footer{background:var(--ink2);border-top:1px solid var(--bdr);padding:5rem 0 2.5
           <li><span style="background:#a78bfa;width:5px;height:5px;border-radius:50%;flex-shrink:0;margin-top:.55rem;display:block"></span><span><strong style="color:var(--white);font-weight:600">Hosting & Domain Included</strong> — SSL, CDN, and fast global hosting included. Connect your domain or get one through Zenova</span></li>
         </ul>
         <div class="pd-btns">
-          <a href="#contact" class="btn btn-primary">Try Zenova Studio free</a>
+          <a href="#lead-form" class="btn btn-primary">Get started with Studio</a>
           <a href="mailto:hello@getzenova.in?subject=Studio Demo" class="btn btn-secondary">See example sites</a>
         </div>
       </div>
@@ -844,7 +851,7 @@ footer{background:var(--ink2);border-top:1px solid var(--bdr);padding:5rem 0 2.5
           <li><span style="background:#a78bfa;width:5px;height:5px;border-radius:50%;flex-shrink:0;margin-top:.55rem;display:block"></span><span><strong style="color:var(--white);font-weight:600">Monthly Visibility Reports</strong> — Clear ranking progress, traffic growth, keyword wins, and AI citation tracking — in plain English</span></li>
         </ul>
         <div class="pd-btns">
-          <a href="#contact" class="btn btn-primary">Try Zenova Signal free</a>
+          <a href="#lead-form" class="btn btn-primary">Get started with Signal</a>
           <a href="mailto:hello@getzenova.in?subject=Signal Demo" class="btn btn-secondary">See a sample report</a>
         </div>
       </div>
@@ -1013,7 +1020,7 @@ footer{background:var(--ink2);border-top:1px solid var(--bdr);padding:5rem 0 2.5
     <div class="fcta-box rv">
       <span class="label">Ready to grow?</span>
       <h2 class="d2 grad">Your business deserves<br>enterprise AI.</h2>
-      <p class="body">Join 2,400+ businesses running on Zenova. Go live in 24 hours. No tech expertise needed. Reach us anytime by form or <a href="mailto:hello@getzenova.in" style="color:var(--cyan)">Send email</a>.</p>
+      <p class="body">Tell us what you want to automate or grow first. Our team will review your request and get back with a clear next step.</p>
       <div class="fcta-btns">
         <a href="mailto:hello@getzenova.in" class="btn btn-primary btn-lg">
           Send email
@@ -1022,7 +1029,7 @@ footer{background:var(--ink2);border-top:1px solid var(--bdr);padding:5rem 0 2.5
         <a href="mailto:hello@getzenova.in?subject=Demo Request" class="btn btn-secondary btn-lg">Book a demo call</a>
       </div>
       <p class="fcta-fine">Live in 24 hours · www.getzenova.in</p>
-      <div class="contact-form-shell">
+      <div class="contact-form-shell" id="lead-form">
         <script type="text/javascript" src="https://form.jotform.com/jsform/261493269538065"></script>
       </div>
     </div>
@@ -1115,7 +1122,7 @@ footer{background:var(--ink2);border-top:1px solid var(--bdr);padding:5rem 0 2.5
 
 <!-- Float CTA -->
 <div class="fl" id="fl">
-  <a href="#contact" class="fl-btn">
+  <a href="#lead-form" class="fl-btn">
     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6H10M7 3.5L10 6L7 8.5" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
     Contact us
   </a>
