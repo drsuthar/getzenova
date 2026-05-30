@@ -11,6 +11,15 @@
 <meta property="og:url" content="https://www.getzenova.in">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='18' stroke='%231647e8' stroke-width='1' fill='%23050914' /%3E%3Ccircle cx='20' cy='20' r='9' stroke='%2300c2d4' stroke-width='1' fill='none'/%3E%3Ccircle cx='20' cy='20' r='4' fill='%2300c2d4'/%3E%3Ccircle cx='20' cy='2.5' r='2' fill='%2300c2d4'/%3E%3C/svg%3E">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JDZKNTK10D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JDZKNTK10D');
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -374,28 +383,6 @@ nav.sc{background:rgba(5,9,20,.88);backdrop-filter:blur(20px) saturate(1.4);bord
 .tc-rl{font-size:.72rem;color:var(--w30)}
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   PRICING
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.pricing{padding:7rem 0;background:linear-gradient(180deg,transparent,rgba(22,71,232,.03) 50%,transparent)}
-.pr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;align-items:start;margin-top:3.5rem}
-@media(max-width:860px){.pr-grid{grid-template-columns:1fr}}
-.pc{background:var(--ink2);border:1px solid var(--bdr);border-radius:12px;padding:2.25rem;position:relative;overflow:hidden;transition:border-color .26s,transform .26s var(--ease)}
-.pc:hover{border-color:var(--bdr2);transform:translateY(-3px)}
-.pc.pop{border-color:rgba(22,71,232,.3);background:linear-gradient(145deg,rgba(22,71,232,.1),rgba(0,194,212,.04));transform:scale(1.02)}
-.pc.pop:hover{transform:scale(1.02) translateY(-3px)}
-.pc-badge{position:absolute;top:0;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,var(--blue),var(--cyan));color:#fff;font-family:var(--fm);font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;padding:.28rem 1.1rem;border-radius:0 0 6px 6px}
-.pc-plan{font-family:var(--fm);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);margin-bottom:.7rem}
-.pc-price{font-family:var(--fd);font-size:2.8rem;font-weight:800;letter-spacing:-.04em;line-height:1;margin-bottom:.18rem}
-.pc-price sup{font-size:1.1rem;font-weight:400;vertical-align:super;margin-right:.04rem;opacity:.55}
-.pc-period{font-size:.78rem;color:var(--w30);margin-bottom:1.2rem}
-.pc-desc{font-size:.82rem;color:var(--w50);line-height:1.6;padding-bottom:1.2rem;border-bottom:1px solid var(--bdr);margin-bottom:1.2rem}
-.pc-feats{list-style:none;margin-bottom:1.75rem}
-.pc-feats li{display:flex;align-items:flex-start;gap:.6rem;font-size:.82rem;color:var(--w50);padding:.35rem 0;border-bottom:1px solid rgba(240,244,255,.03)}
-.pc-feats li:last-child{border-bottom:none}
-.pf{width:14px;height:14px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
-.pf.y{background:rgba(0,194,212,.1);color:var(--cyan)}.pf.n{background:var(--w03);color:var(--w12)}
-
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    FINAL CTA
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 .fcta{padding:7rem 0}
@@ -405,6 +392,8 @@ nav.sc{background:rgba(5,9,20,.88);backdrop-filter:blur(20px) saturate(1.4);bord
 .fcta-box p{max-width:420px;margin:0 auto 2.25rem}
 .fcta-btns{display:flex;justify-content:center;gap:.75rem;flex-wrap:wrap}
 .fcta-fine{font-family:var(--fm);font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;color:var(--w12);margin-top:1.2rem}
+.contact-form-shell{margin:3rem auto 0;max-width:720px;text-align:left;position:relative;z-index:1}
+.contact-form-shell iframe{border-radius:10px}
 @media(max-width:600px){.fcta-box{padding:3.5rem 1.75rem;border-radius:10px}}
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -459,9 +448,8 @@ footer{background:var(--ink2);border-top:1px solid var(--bdr);padding:5rem 0 2.5
   <a href="#products">Products</a>
   <a href="#approach">How It Works</a>
   <a href="#industries">Industries</a>
-  <a href="#pricing">Pricing</a>
-  <a href="mailto:hello@getzenova.in">Contact</a>
-  <a href="#pricing" class="btn btn-primary" style="margin-top:.5rem">Get started free</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact" class="btn btn-primary" style="margin-top:.5rem">Get started free</a>
 </div>
 
 <!-- ═══════════ NAVIGATION ═══════════ -->
@@ -496,13 +484,12 @@ footer{background:var(--ink2);border-top:1px solid var(--bdr);padding:5rem 0 2.5
         <li><a href="#products">Products</a></li>
         <li><a href="#approach">How It Works</a></li>
         <li><a href="#industries">Industries</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="mailto:hello@getzenova.in">Contact</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
 
       <div class="nr">
-        <a href="mailto:hello@getzenova.in" class="btn btn-secondary" style="padding:.5rem 1.1rem;font-size:.8rem">hello@getzenova.in</a>
-        <a href="#pricing" class="btn btn-primary" style="padding:.55rem 1.3rem;font-size:.82rem">
+        <a href="mailto:hello@getzenova.in" class="btn btn-secondary" style="padding:.5rem 1.1rem;font-size:.8rem">Send email</a>
+        <a href="#contact" class="btn btn-primary" style="padding:.55rem 1.3rem;font-size:.82rem">
           Get started
           <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M3 6.5H10M7 4L10 6.5L7 9" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -543,7 +530,7 @@ footer{background:var(--ink2);border-top:1px solid var(--bdr);padding:5rem 0 2.5
         Three focused AI products — Zenova Aria handles your calls and automation, Zenova Studio builds your web presence, Zenova Signal grows your visibility. One platform. Zero complexity.
       </p>
       <div class="hero-btns">
-        <a href="#pricing" class="btn btn-primary btn-lg">
+        <a href="#contact" class="btn btn-primary btn-lg">
           Start free — no card needed
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7H11M8 4.5L11 7L8 9.5" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -668,7 +655,7 @@ footer{background:var(--ink2);border-top:1px solid var(--bdr);padding:5rem 0 2.5
           <li><span style="background:#f59e0b;width:5px;height:5px;border-radius:50%;flex-shrink:0;margin-top:.55rem;display:block"></span><span><strong style="color:var(--white);font-weight:600">Built-in CRM</strong> — 360° contact profiles, lead scoring, pipeline management, and automated follow-up tasks</span></li>
         </ul>
         <div class="pd-btns">
-          <a href="#pricing" class="btn btn-primary">Try Zenova Aria free</a>
+          <a href="#contact" class="btn btn-primary">Try Zenova Aria free</a>
           <a href="mailto:hello@getzenova.in?subject=Aria Demo" class="btn btn-secondary">Request a demo</a>
         </div>
       </div>
@@ -764,7 +751,7 @@ footer{background:var(--ink2);border-top:1px solid var(--bdr);padding:5rem 0 2.5
           <li><span style="background:#a78bfa;width:5px;height:5px;border-radius:50%;flex-shrink:0;margin-top:.55rem;display:block"></span><span><strong style="color:var(--white);font-weight:600">Hosting & Domain Included</strong> — SSL, CDN, and fast global hosting included. Connect your domain or get one through Zenova</span></li>
         </ul>
         <div class="pd-btns">
-          <a href="#pricing" class="btn btn-primary">Try Zenova Studio free</a>
+          <a href="#contact" class="btn btn-primary">Try Zenova Studio free</a>
           <a href="mailto:hello@getzenova.in?subject=Studio Demo" class="btn btn-secondary">See example sites</a>
         </div>
       </div>
@@ -857,7 +844,7 @@ footer{background:var(--ink2);border-top:1px solid var(--bdr);padding:5rem 0 2.5
           <li><span style="background:#a78bfa;width:5px;height:5px;border-radius:50%;flex-shrink:0;margin-top:.55rem;display:block"></span><span><strong style="color:var(--white);font-weight:600">Monthly Visibility Reports</strong> — Clear ranking progress, traffic growth, keyword wins, and AI citation tracking — in plain English</span></li>
         </ul>
         <div class="pd-btns">
-          <a href="#pricing" class="btn btn-primary">Try Zenova Signal free</a>
+          <a href="#contact" class="btn btn-primary">Try Zenova Signal free</a>
           <a href="mailto:hello@getzenova.in?subject=Signal Demo" class="btn btn-secondary">See a sample report</a>
         </div>
       </div>
@@ -1020,96 +1007,24 @@ footer{background:var(--ink2);border-top:1px solid var(--bdr);padding:5rem 0 2.5
 
 <div class="hr-c"></div>
 
-<!-- ═══════════ PRICING ═══════════ -->
-<section class="pricing" id="pricing">
-  <div class="wrap">
-    <div class="sh c rv">
-      <div class="sl"><div class="sl-line"></div><span class="label">Pricing</span></div>
-      <h2 class="d2">Start free.<br><span class="grad">Scale without limits.</span></h2>
-      <p class="body">No hidden fees. No long-term contracts. Cancel anytime.<br>Questions? Email <a href="mailto:hello@getzenova.in" style="color:var(--cyan);border-bottom:1px solid rgba(0,194,212,.3)">hello@getzenova.in</a></p>
-    </div>
-    <div class="pr-grid">
-
-      <!-- Starter -->
-      <div class="pc rv">
-        <div class="pc-plan">Starter</div>
-        <div class="pc-price"><sup>₹</sup>2,999</div>
-        <div class="pc-period">per month · billed monthly</div>
-        <div class="pc-desc">For solo practitioners and single-location businesses getting started with AI automation.</div>
-        <ul class="pc-feats">
-          <li><div class="pf y"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>Zenova Aria — 100 calls/month</li>
-          <li><div class="pf y"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>WhatsApp chatbot — 1 bot</li>
-          <li><div class="pf y"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>CRM — up to 500 contacts</li>
-          <li><div class="pf y"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>Appointment booking system</li>
-          <li><div class="pf y"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>Basic analytics dashboard</li>
-          <li><div class="pf n"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 1.5l5 5M6.5 1.5l-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></div>Zenova Studio website</li>
-          <li><div class="pf n"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 1.5l5 5M6.5 1.5l-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></div>Zenova Signal SEO/AEO</li>
-          <li><div class="pf n"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 1.5l5 5M6.5 1.5l-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></div>Workflow automation builder</li>
-        </ul>
-        <a href="mailto:hello@getzenova.in?subject=Starter Plan" class="btn btn-secondary" style="width:100%;justify-content:center">Get started free</a>
-      </div>
-
-      <!-- Growth -->
-      <div class="pc pop rv d1x">
-        <div class="pc-badge">Most Popular</div>
-        <div class="pc-plan" style="margin-top:1.4rem">Growth</div>
-        <div class="pc-price"><sup>₹</sup>7,999</div>
-        <div class="pc-period">per month · billed monthly</div>
-        <div class="pc-desc">The full Zenova suite for growing businesses that want AI, web presence, and search visibility in one place.</div>
-        <ul class="pc-feats">
-          <li><div class="pf y"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>Zenova Aria — unlimited calls</li>
-          <li><div class="pf y"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>WhatsApp API — 5 chatbots</li>
-          <li><div class="pf y"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>Full workflow automation builder</li>
-          <li><div class="pf y"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>CRM — 10,000 contacts</li>
-          <li><div class="pf y"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>Zenova Studio — 1 full website</li>
-          <li><div class="pf y"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>Zenova Signal — SEO + AEO + Local</li>
-          <li><div class="pf y"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>Custom AI onboarding & training</li>
-          <li><div class="pf y"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>Priority support — 8h response</li>
-        </ul>
-        <a href="mailto:hello@getzenova.in?subject=Growth Plan" class="btn btn-primary" style="width:100%;justify-content:center">
-          Start Growth plan
-          <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M3 6.5H10M7 4L10 6.5L7 9" stroke="white" stroke-width="1.4" stroke-linecap="round"/></svg>
-        </a>
-      </div>
-
-      <!-- Enterprise -->
-      <div class="pc rv d2x">
-        <div class="pc-plan">Enterprise</div>
-        <div class="pc-price" style="font-size:2.2rem;padding-top:.2rem">Custom</div>
-        <div class="pc-period">Tailored to your business</div>
-        <div class="pc-desc">For multi-location businesses, franchise groups, and agencies managing multiple SMB clients.</div>
-        <ul class="pc-feats">
-          <li><div class="pf y"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>Everything in Growth, unlimited</li>
-          <li><div class="pf y"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>Multi-location dashboard</li>
-          <li><div class="pf y"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>White-label for agencies</li>
-          <li><div class="pf y"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>Dedicated success manager</li>
-          <li><div class="pf y"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>Custom API integrations</li>
-          <li><div class="pf y"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>SLA 99.9% uptime</li>
-          <li><div class="pf y"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>Unlimited Studio websites</li>
-          <li><div class="pf y"><svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>24/7 WhatsApp & phone support</li>
-        </ul>
-        <a href="mailto:hello@getzenova.in?subject=Enterprise Enquiry" class="btn btn-outline" style="width:100%;justify-content:center">Talk to our team</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
 <!-- ═══════════ FINAL CTA ═══════════ -->
 <section class="fcta" id="contact">
   <div class="wrap">
     <div class="fcta-box rv">
       <span class="label">Ready to grow?</span>
       <h2 class="d2 grad">Your business deserves<br>enterprise AI.</h2>
-      <p class="body">Join 2,400+ businesses running on Zenova. Go live in 24 hours. No tech expertise needed. Reach us anytime at <a href="mailto:hello@getzenova.in" style="color:var(--cyan)">hello@getzenova.in</a></p>
+      <p class="body">Join 2,400+ businesses running on Zenova. Go live in 24 hours. No tech expertise needed. Reach us anytime by form or <a href="mailto:hello@getzenova.in" style="color:var(--cyan)">Send email</a>.</p>
       <div class="fcta-btns">
-        <a href="#pricing" class="btn btn-primary btn-lg">
-          Start for free
+        <a href="mailto:hello@getzenova.in" class="btn btn-primary btn-lg">
+          Send email
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7H11M8 4.5L11 7L8 9.5" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
         <a href="mailto:hello@getzenova.in?subject=Demo Request" class="btn btn-secondary btn-lg">Book a demo call</a>
       </div>
-      <p class="fcta-fine">No credit card · Cancel anytime · Live in 24 hours · www.getzenova.in</p>
+      <p class="fcta-fine">Live in 24 hours · www.getzenova.in</p>
+      <div class="contact-form-shell">
+        <script type="text/javascript" src="https://form.jotform.com/jsform/261493269538065"></script>
+      </div>
     </div>
   </div>
 </section>
@@ -1138,7 +1053,7 @@ footer{background:var(--ink2);border-top:1px solid var(--bdr);padding:5rem 0 2.5
         <p class="f-desc">AI-powered growth platform for small and medium businesses. Zenova Aria · Zenova Studio · Zenova Signal.</p>
         <a href="mailto:hello@getzenova.in" class="f-ci">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1.5" y="3" width="11" height="8" rx="2" stroke="currentColor" stroke-width="1.1"/><path d="M1.5 5.5l5.5 3.5 5.5-3.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
-          hello@getzenova.in
+          Send email
         </a>
         <a href="https://www.getzenova.in" class="f-ci">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.1"/><path d="M7 1.5c-1.5 1.5-2.5 3.5-2.5 5.5s1 4 2.5 5.5M7 1.5c1.5 1.5 2.5 3.5 2.5 5.5s-1 4-2.5 5.5M1.5 7h11" stroke="currentColor" stroke-width="1" opacity=".6"/></svg>
@@ -1158,7 +1073,6 @@ footer{background:var(--ink2);border-top:1px solid var(--bdr);padding:5rem 0 2.5
           <li><a href="#aria">Zenova Aria</a></li>
           <li><a href="#studio">Zenova Studio</a></li>
           <li><a href="#signal">Zenova Signal</a></li>
-          <li><a href="#pricing">Pricing</a></li>
         </ul>
       </div>
 
@@ -1169,7 +1083,7 @@ footer{background:var(--ink2);border-top:1px solid var(--bdr);padding:5rem 0 2.5
           <li><a href="#">Blog</a></li>
           <li><a href="#">Careers</a></li>
           <li><a href="#">Press</a></li>
-          <li><a href="mailto:hello@getzenova.in">Contact</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
 
@@ -1183,7 +1097,7 @@ footer{background:var(--ink2);border-top:1px solid var(--bdr);padding:5rem 0 2.5
         <p style="font-size:.66rem;color:var(--w12);margin-top:.45rem">No spam. Unsubscribe anytime.</p>
         <div style="margin-top:1.4rem">
           <div class="f-ct">Get in touch</div>
-          <a href="mailto:hello@getzenova.in" style="font-size:.82rem;color:var(--cyan)">hello@getzenova.in</a>
+          <a href="mailto:hello@getzenova.in" style="font-size:.82rem;color:var(--cyan)">Send email</a>
         </div>
       </div>
 
@@ -1201,9 +1115,9 @@ footer{background:var(--ink2);border-top:1px solid var(--bdr);padding:5rem 0 2.5
 
 <!-- Float CTA -->
 <div class="fl" id="fl">
-  <a href="#pricing" class="fl-btn">
+  <a href="#contact" class="fl-btn">
     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6H10M7 3.5L10 6L7 8.5" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    Start free
+    Contact us
   </a>
 </div>
 
@@ -1217,9 +1131,13 @@ document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.le
 
 // Nav
 const nav=document.getElementById('nav');
+const fl=document.getElementById('fl');
+const contactSection=document.getElementById('contact');
 window.addEventListener('scroll',()=>{
   nav.classList.toggle('sc',window.scrollY>50);
-  document.getElementById('fl').classList.toggle('show',window.scrollY>600);
+  const contactRect=contactSection?.getBoundingClientRect();
+  const contactVisible=contactRect&&contactRect.top<window.innerHeight&&contactRect.bottom>0;
+  fl.classList.toggle('show',window.scrollY>600&&!contactVisible);
 });
 
 // Mobile menu
